@@ -9,7 +9,10 @@ import {
 } from '@nrwl/devkit'
 import * as path from 'path'
 import { WebGeneratorSchema } from './schema'
-import { applicationGenerator } from '@nrwl/angular'
+import { wrapAngularDevkitSchematic } from '@nrwl/tao/src/commands/ngcli-adapter'
+
+export const applicationGenerator = wrapAngularDevkitSchematic('@nrwl/angular', 'application')
+
 interface NormalizedSchema extends WebGeneratorSchema {
   projectName: string
   projectRoot: string
