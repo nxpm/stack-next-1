@@ -24,7 +24,7 @@
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "test:ci": "yarn nx affected:test && yarn nx affected:e2e"
+    "test:ci": "yarn nx run-many --target test --all && yarn nx run-many --target e2e --all"
   },
   "husky": {
     "hooks": {
