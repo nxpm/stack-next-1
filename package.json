@@ -24,7 +24,7 @@
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "test:ci": "yarn nx e2e api-e2e"
+    "test:ci": "yarn nx affected:test && yarn nx affected:e2e"
   },
   "husky": {
     "hooks": {
@@ -44,6 +44,7 @@
   "private": true,
   "dependencies": {},
   "devDependencies": {
+    "@nrwl/angular": "^11.1.5",
     "@nrwl/cli": "11.1.5",
     "@nrwl/devkit": "11.1.5",
     "@nrwl/eslint-plugin-nx": "11.1.5",
